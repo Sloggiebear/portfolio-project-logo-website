@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap");
+:root {
+  --blue: #35a7d4;
+  --mint: #73ddcf;
+  --gradient: linear-gradient(100deg, var(--mint), var(--blue));
+  --fontbody: "Source Sans Pro", sans-serif;
+  --fontheading: "Oswald", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontheading);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+body {
+  font-family: var(--fontbody);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-mint {
+  color: var(--mint);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  text-decoration: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5em 2em;
+  color: black;
+  font-family: var(--fontheading);
+  font-weight: 700;
+}
+
+.logo {
+  display: block;
+  height: 100px;
+  max-width: 300px;
+}
+
+header {
+  background: #020024;
+  background: linear-gradient(37deg, var(--blue), var(--mint));
+  display: block;
+  height: 100vh;
+  width: 100%;
+  padding-top: 120px;
+}
+
+main {
+  width: 100%;
+  padding: 0.8rem;
+  margin: auto;
+}
+
+.display-1 {
+  font-weight: 700;
+}
+
+.btn-get-started {
+  background: linear-gradient(37deg, var(--blue), var(--mint));
+  color: #ffffff;
+  font-family: var(--fontheading);
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn-get-started:hover {
+  background: linear-gradient(90deg, var(--blue), var(--mint));
+  box-shadow: -1px -1px 11px 3px #d0d0d0;
+  transform: scale(1.1);
+}
+
+.box {
+  min-height: 350px;
+  transition: all ease-in-out 0.5s;
+  padding: 15px;
+}
+
+.box:hover {
+  box-shadow: -1px -1px 11px 3px #d0d0d0;
+  transform: translate(0px, -20px);
+}
+
+.accordion-button {
+  font-size: 1.7rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background: linear-gradient(90deg, var(--blue), var(--mint));
+}
+
+.accordion-body {
+  padding: 2rem 1rem;
+  background-color: #ececec;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+
+footer .footer--heading {
+  font-size: 2.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+footer .footer--columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+footer .footer--col {
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+footer .footer--col h4 {
+  margin-bottom: 1em;
+}
+
+footer .footer--col ul,
+footer .footer--col li {
+  margin-left: 15px;
+}
