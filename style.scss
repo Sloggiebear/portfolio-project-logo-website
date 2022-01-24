@@ -93,7 +93,8 @@ main {
 .display-1 {
   font-weight: 700;
 }
-.btn-get-started {
+
+.button {
   background: linear-gradient(37deg, var(--blue), var(--mint));
   color: #ffffff;
   font-family: var(--fontheading);
@@ -106,6 +107,11 @@ main {
 
   &:hover {
     background: linear-gradient(90deg, var(--blue), var(--mint));
+  }
+}
+
+.hover-scale {
+  &:hover {
     box-shadow: -1px -1px 11px 3px #d0d0d0;
     transform: scale(1.1);
   }
@@ -135,6 +141,27 @@ main {
   padding: 2rem 1rem;
   background-color: rgb(236, 236, 236);
 }
+
+.contact-image {
+  background-image: url(/img/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+  background-attachment: scroll;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 // FOOTER
 
 footer {
@@ -172,4 +199,31 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+.validated {
+  outline: 3px solid #a6dda6;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(/img/tick.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    background-color: rgb(157, 224, 157);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.invalid {
+  outline: 3px solid #d68e8e;
 }
