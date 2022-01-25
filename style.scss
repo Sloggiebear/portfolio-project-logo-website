@@ -28,11 +28,11 @@ body {
   overflow-x: hidden;
 }
 
-.text-blue {
+.text-color1 {
   color: var(--color1);
 }
 
-.text-mint {
+.text-color2 {
   color: var(--color2);
 }
 
@@ -68,7 +68,7 @@ body {
 
 .nav-scrolled {
   box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.788) !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .logo {
@@ -117,8 +117,12 @@ body {
 .navbar-toggler {
   margin-right: 10px;
 }
+nav {
+  transition: all ease-in-out 1s;
+}
 
 .navbar-nav {
+  font-size: 1.19rem;
   .nav-link {
     padding: 10px 30px;
     text-transform: uppercase;
@@ -130,6 +134,7 @@ body {
 }
 
 .submenu {
+  font-size: 1.19rem;
   margin-right: 1rem;
   text-transform: uppercase;
 }
