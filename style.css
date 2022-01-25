@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap");
 :root {
-  --blue: #d435cc;
-  --mint: #9373dd;
-  --gradient: linear-gradient(100deg, var(--mint), var(--blue));
+  --color1: #d435cc;
+  --color2: #9373dd;
+  --gradient: linear-gradient(100deg, var(--color2), var(--color1));
   --fontbody: "Source Sans Pro", sans-serif;
   --fontheading: "Oswald", sans-serif;
 }
@@ -28,11 +28,11 @@ body {
 }
 
 .text-blue {
-  color: var(--blue);
+  color: var(--color1);
 }
 
 .text-mint {
-  color: var(--mint);
+  color: var(--color2);
 }
 
 .text-white {
@@ -40,12 +40,12 @@ body {
 }
 
 .text-stroke {
-  text-shadow: 5px 5px var(--blue);
+  text-shadow: 5px 5px var(--color1);
   color: white;
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(35deg, var(--blue), var(--mint));
+  background: -webkit-linear-gradient(35deg, var(--color1), var(--color2));
   background-size: 500%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -74,7 +74,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 280px;
+  max-width: 185px;
 }
 
 .callus {
@@ -91,15 +91,53 @@ body {
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 5px;
   transform: translateY(-50%);
 }
 
+.myaccount {
+  padding-left: 30px;
+  position: relative;
+}
+
+.myaccount::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/user.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color1);
+}
+
+.submenu {
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+
 header {
-  background-image: url(/img/header-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
+  clip-path: polygon(0 0, 100% 0, 100% 97%, 82% 93%, 60% 95%, 36% 100%, 20% 93%, 10% 98%, 0 100%);
+  background: linear-gradient(37deg, var(--color1), var(--color2));
   display: block;
   min-height: 60vh;
   width: 100%;
@@ -128,7 +166,9 @@ header .btn-header {
 }
 
 header .btn-header:hover {
-  background: linear-gradient(37deg, var(--blue), var(--mint));
+  background: white;
+  font-weight: 700;
+  color: black;
 }
 
 header .form {
@@ -147,7 +187,7 @@ main {
 }
 
 .button {
-  background: linear-gradient(37deg, var(--blue), var(--mint));
+  background: linear-gradient(37deg, var(--color1), var(--color2));
   color: #ffffff;
   font-family: var(--fontheading);
   font-size: 1.5rem;
@@ -159,12 +199,12 @@ main {
 }
 
 .button:hover {
-  background: linear-gradient(90deg, var(--blue), var(--mint));
+  background: linear-gradient(90deg, var(--color1), var(--color2));
 }
 
 .hover-scale:hover {
-  box-shadow: -1px -1px 11px 3px #0000002f;
-  transform: scale(1.15);
+  box-shadow: -1px -1px 11px 3px #00000063;
+  transform: scale(1.05);
 }
 
 .box {
@@ -184,7 +224,7 @@ main {
 
 .accordion-button:not(.collapsed) {
   color: #ffffff;
-  background: linear-gradient(90deg, var(--blue), var(--mint));
+  background: linear-gradient(90deg, var(--color1), var(--color2));
 }
 
 .accordion-body {
@@ -275,4 +315,12 @@ footer .footer--col li {
 
 .invalid {
   outline: 3px solid #d68e8e;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+  }
 }

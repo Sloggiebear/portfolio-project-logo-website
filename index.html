@@ -46,10 +46,17 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link myaccount" href="#">My Account</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <hr class=""/>
+              <p class="callus text-blue mb-0">0801 255 369</p>
+            </li>
           </ul>
-          <div>
-            <a href="#">My Account</a>
-            <p class="callus">0801 255 369</p>
+          <div class="d-none d-lg-flex submenu">
+              <a class="nav-link myaccount text-blue" href="#">My Account</a>
+              <p class="callus text-blue mb-0 pt-2">0801 255 369</p>
           </div>
         </div>
       </div>
@@ -60,13 +67,13 @@
     <!-- Start Header -->
     <header class="mb-5">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8 form">
-            <h1 class="display-1 text-white">
-              <span class="text-stroke">Instantly and easily</span><br />
-              design your new logo!
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-8 form">
+            <h1 class=" text-white text-center">
+              design your new logo!<br />
+              <span class="display-1">Instantly & easily</span>
             </h1>
-            <form>
+            <form class="text-center">
               <input
                 class="input-companyname mb-4"
                 type="text"
@@ -77,7 +84,7 @@
                 required="required"
                 aria-required="true"
               />
-              <button class="btn-header hover-scale">
+              <button class="btn-header hover-scale me-auto ms-auto">
                 Design my new logo!
               </button>
             </form>
@@ -333,7 +340,7 @@
                   placeholder="Suggest a suitable date and time and tell us a little about your project"
                 ></textarea>
               </div>
-              <button type="submit" class="button" value="Submit">
+              <button type="submit" class="button hover-scale" value="Submit">
                 Book Now!
               </button>
             </form>
