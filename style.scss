@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap");
 
 :root {
-  --blue: #35a7d4;
-  --mint: #73ddcf;
+  --blue: #d435cc;
+  --mint: #9373dd;
   --gradient: linear-gradient(100deg, var(--mint), var(--blue));
   --fontbody: "Source Sans Pro", sans-serif;
   --fontheading: "Oswald", sans-serif;
@@ -25,6 +25,7 @@ body {
   font-family: var(--fontbody);
   font-size: 1.4rem;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .text-blue {
@@ -39,50 +40,101 @@ body {
   color: #ffffff;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  height: 80px;
-  text-decoration: none;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
+.text-stroke {
+  text-shadow: 5px 5px var(--blue);
+  color: white;
+}
 
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+.text-gradient {
+  background: -webkit-linear-gradient(35deg, var(--blue), var(--mint));
+  background-size: 500%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bg-animation 1.3s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
   }
-
-  a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0.5em 2em;
-    color: black;
-    font-family: var(--fontheading);
-    font-weight: 700;
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
   }
 }
 
-nav-scrolled {
+.nav-scrolled {
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.788) !important;
 }
 
 .logo {
   display: block;
-  height: 100px;
-  max-width: 300px;
+  width: 100%;
+  height: auto;
+  max-width: 280px;
 }
 
+.callus {
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/img/phone.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+  }
+}
 header {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(37deg, var(--blue), var(--mint));
+  background-image: url(/img/header-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  // background: linear-gradient(37deg, var(--blue), var(--mint));
   display: block;
-  height: 100vh;
+  min-height: 60vh;
   width: 100%;
-  padding-top: 120px;
+  padding: 250px 0px 100px 0px;
+
+  .input-companyname {
+    text-align: center;
+    border: none;
+    padding: 1em;
+    font-size: 1.6rem;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+  }
+
+  .btn-header {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1em 2em;
+    background-color: #353535;
+    transition: all ease-in-out 0.5s;
+    display: block;
+
+    &:hover {
+      background: linear-gradient(37deg, var(--blue), var(--mint));
+    }
+  }
+
+  .form {
+    background: #0000006b;
+    padding: 31px;
+  }
 }
 
 main {
@@ -112,8 +164,8 @@ main {
 
 .hover-scale {
   &:hover {
-    box-shadow: -1px -1px 11px 3px #d0d0d0;
-    transform: scale(1.1);
+    box-shadow: -1px -1px 11px 3px #0000002f;
+    transform: scale(1.15);
   }
 }
 
@@ -165,8 +217,8 @@ input[type="number"] {
 // FOOTER
 
 footer {
-  background-color: rgb(53, 53, 53);
-  color: white;
+  background-color: rgb(219, 219, 219);
+  color: rgb(54, 54, 54);
   padding: 2rem;
   font-size: 1.3rem;
 
