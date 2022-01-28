@@ -304,6 +304,8 @@ main {
   transform: rotate(-3deg);
   max-width: 300px;
   margin: 80px auto 30px auto;
+  -webkit-box-shadow: 3px 3px 35px 6px black;
+          box-shadow: 3px 3px 35px 6px black;
 }
 
 .accordion-button {

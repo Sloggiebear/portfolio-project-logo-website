@@ -12,8 +12,9 @@
       crossorigin="anonymous"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -98,6 +99,27 @@
 
     <!-- Start Main -->
     <main>
+
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="owl-carousel">
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+              <div> <img src="/img/tailor-logo.png" alt=""></div>
+
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
       <section class="container-fluid pb-lg-5 mb-lg-5">
         <div class="row justify-content-center align-items-top mb-5">
           <div class="col-12">
@@ -156,7 +178,7 @@
         </div>
       </section>
 
-      <section class="hero mb-5 d-none d-md-block">
+      <section class="hero mb-5 d-none d-md-flex">
         <div class="hero-content">
           <img src="/img/tailor-logo.png" alt="Tailor Logo">
           <p class="quote">My logo design problem was solved fast, allowing me to focus on what I do best.</p>
@@ -393,4 +415,29 @@
       {disable: "mobile"}
     );
   </script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script>$(document).ready(function(){
+    $(".owl-carousel").owlCarousel(
+      {
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:4,
+                nav:true,
+                loop:false
+            }
+        }
+      });
+  });</script>
 </html>
