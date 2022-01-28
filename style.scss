@@ -4,6 +4,7 @@
 :root {
   --color1: #d435cc;
   --color2: #9373dd;
+  --darkgrey: #1a1a1a;
   --gradient: linear-gradient(100deg, var(--color2), var(--color1));
   --fontbody: "Source Sans Pro", sans-serif;
   --fontheading: "Oswald", sans-serif;
@@ -23,8 +24,8 @@ h6 {
 
 body {
   font-family: var(--fontbody);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 300;
   overflow-x: hidden;
 }
 
@@ -79,7 +80,7 @@ body {
 }
 
 .callus {
-  padding-left: 30px;
+  padding: 10px 30px;
   position: relative;
 
   &::before {
@@ -97,7 +98,7 @@ body {
 }
 
 .myaccount {
-  padding-left: 30px;
+  padding-left: 10px 30px;
   position: relative;
 
   &::before {
@@ -119,13 +120,17 @@ body {
 }
 nav {
   transition: all ease-in-out 1s;
+  padding: 10px 20px;
 }
 
-.navbar-nav {
-  font-size: 1.19rem;
+.navbar-nav, .submenu {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  
   .nav-link {
     padding: 10px 30px;
-    text-transform: uppercase;
+    
     color: #000000;
     &:hover {
       color: var(--color1);
@@ -133,11 +138,6 @@ nav {
   }
 }
 
-.submenu {
-  font-size: 1.19rem;
-  margin-right: 1rem;
-  text-transform: uppercase;
-}
 header {
   // background-image: url(/img/header-2.jpg);
   background-repeat: no-repeat;
@@ -200,6 +200,7 @@ main {
   padding: 0.8rem;
   margin: auto;
 }
+
 .display-1 {
   font-weight: 700;
 }
@@ -220,6 +221,7 @@ main {
   }
 }
 
+
 .hover-scale {
   &:hover {
     box-shadow: -1px -1px 11px 3px #00000063;
@@ -235,6 +237,56 @@ main {
   &:hover {
     box-shadow: -1px -1px 11px 3px #d0d0d0;
     transform: translate(0px, -20px);
+  }
+}
+
+.hero {
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  width: 100%;
+  min-height: 600px;
+  background-image: url(/img/header-2.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  
+  .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: -10px;
+    left: 15%;
+    background-color: rgba(17, 17, 59, 0.432);
+    padding: 20px;
+    width: calc(100vw / 1.75 - 15vw);
+    text-align: center;
+
+    .quote {
+      color: #ffffff;
+      font-weight: 200;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      line-height: 2.4rem;
+    }
+
+    .citation {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    img {
+      width: 100%;
+    outline: 7px solid #ffffff;
+    -webkit-transform: rotate(
+-5deg
+);
+    transform: rotate(
+-3deg
+);
+    max-width: 300px;
+    margin: 80px auto 30px auto;
+    }
   }
 }
 
@@ -307,6 +359,26 @@ footer {
     ul,
     li {
       margin-left: 15px;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 0px;
+  
+    svg {
+      fill: var(--darkgrey);
+      width: 30px;
+      height: auto;
+      margin: 10px 15px 0px 0px;
+      transition: all ease-in-out .3s;
+  
+      &:hover {
+        fill: var(--color1);
+        transform: scale(1.1);
+      }
     }
   }
 }

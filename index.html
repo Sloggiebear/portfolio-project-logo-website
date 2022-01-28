@@ -12,6 +12,8 @@
       crossorigin="anonymous"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+   <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -56,7 +58,7 @@
           </ul>
           <div class="d-none d-lg-flex submenu">
               <a class="nav-link myaccount text-color1" href="#">My Account</a>
-              <p class="callus text-color1 mb-0 pt-2">0801 255 369</p>
+              <p class="callus text-color1 mb-0">0801 255 369</p>
           </div>
         </div>
       </div>
@@ -96,7 +98,7 @@
 
     <!-- Start Main -->
     <main>
-      <div class="container-fluid pb-lg-5 mb-lg-5">
+      <section class="container-fluid pb-lg-5 mb-lg-5">
         <div class="row justify-content-center align-items-top mb-5">
           <div class="col-12">
             <h1 class="text-center display-1">
@@ -105,7 +107,7 @@
           </div>
           <div
             class="col-12 col-md-4 col-lg-3 box text-center"
-            data-aos="fade-down"
+            data-aos="fade-right"
           >
             <img class="img-fluid mb-5" src="/img/brand1.jpg" alt="" />
             <h3 class="mb-4">Branded Products</h3>
@@ -113,15 +115,12 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
               dicta, possimus amet repellat tempore quod eum quaerat laboriosam
               voluptatum accusantium eveniet, ducimus voluptas rem modi ab
-              fugiat corrupti minus aut? Repudiandae harum, ut beatae porro
-              consequuntur illum odit animi iusto delectus atque eligendi dolore
-              laborum dicta aut nemo ipsam doloribus! Vel quaerat porro tempore,
-              iure odit itaque qui veritatis dolore.
+              fugiat corrupti minus aut.
             </p>
           </div>
           <div
             class="col-12 col-md-4 col-lg-3 box text-center"
-            data-aos="fade-down"
+            data-aos="fade-up"
           >
             <img class="img-fluid mb-5" src="/img/brand2.jpg" alt="" />
             <h3 class="mb-4">Branded Apparel</h3>
@@ -129,15 +128,12 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
               dicta, possimus amet repellat tempore quod eum quaerat laboriosam
               voluptatum accusantium eveniet, ducimus voluptas rem modi ab
-              fugiat corrupti minus aut? Repudiandae harum, ut beatae porro
-              consequuntur illum odit animi iusto delectus atque eligendi dolore
-              laborum dicta aut nemo ipsam doloribus! Vel quaerat porro tempore,
-              iure odit itaque qui veritatis dolore.
+              fugiat corrupti minus aut.
             </p>
           </div>
           <div
             class="col-12 col-md-4 col-lg-3 box text-center"
-            data-aos="fade-down"
+            data-aos="fade-left"
           >
             <img class="img-fluid mb-5" src="/img/brand3.jpg" alt="" />
             <h3 class="mb-4">Branded Merchandise</h3>
@@ -145,24 +141,28 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
               dicta, possimus amet repellat tempore quod eum quaerat laboriosam
               voluptatum accusantium eveniet, ducimus voluptas rem modi ab
-              fugiat corrupti minus aut? Repudiandae harum, ut beatae porro
-              consequuntur illum odit animi iusto delectus atque eligendi dolore
-              laborum dicta aut nemo ipsam doloribus! Vel quaerat porro tempore,
-              iure odit itaque qui veritatis dolore.
+              fugiat corrupti minus aut.
             </p>
           </div>
         </div>
         <div class="row p-4 bg-light">
           <div class="col-12 d-flex flex-column align-items-center py-5 my-5">
-            <h2 class="display-1" data-aos="fade-down">
-              Design a <span class="text-color1">slick</span>, new company logo in
+            <h2 class="display-1 text-center" data-aos="fade-up">
+              Design a <span class="text-color1">slick,</span><br />new company logo in
               seconds
             </h2>
             <button class="button hover-scale">Get Started Now</button>
           </div>
         </div>
-      </div>
+      </section>
 
+      <section class="hero mb-5 d-none d-md-block">
+        <div class="hero-content">
+          <img src="/img/tailor-logo.png" alt="Tailor Logo">
+          <p class="quote">My logo design problem was solved fast, allowing me to focus on what I do best.</p>
+          <p class="citation">Ingrid Glasson, Owner | Glasson Tailors</p>
+        </div>
+      </section>
       <section class="section-faq container mb-5 pb-5">
         <h2 class="text-center">Frequently Asked Questions</h2>
 
@@ -266,7 +266,7 @@
         <div class="row">
           <div
             class="col-12 col-md-6 col-lg-4 offset-lg-1"
-            data-aos="fade-down"
+            data-aos="right-down"
           >
             <h2>
               <span class="display-1 text-color1">Book Your Free</span><br />
@@ -367,6 +367,14 @@
           <p>Registered Office: 100 Main Street, Oxford, London L017XA</p>
           <p>+0044 1234 56789</p>
           <p><a href="mailto:#">info@autologo.com</a></p>
+          <div class="social">
+            <a id="instagram" href="https://www.instagram.com/vegan/" target="_blank">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="cls-1" d="M10,3a7,7,0,0,0-7,7V20a7,7,0,0,0,7,7H20a7,7,0,0,0,7-7V10a7,7,0,0,0-7-7ZM22,7a.94.94,0,0,1,1,1,1,1,0,0,1-2,0A.94.94,0,0,1,22,7ZM15,9a6,6,0,1,1-6,6A6,6,0,0,1,15,9Zm0,2a4,4,0,1,0,4,4A4,4,0,0,0,15,11Z" transform="translate(-3 -3)"/></svg>
+            </a>
+            <a id="twitter" href="https://twitter.com/vegan" target="_blank">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.9 21.2"><path class="cls-1" d="M28,6.9a10.89,10.89,0,0,1-3.1.8,5.35,5.35,0,0,0,2.3-3A10,10,0,0,1,23.8,6a5.61,5.61,0,0,0-3.9-1.7,5.34,5.34,0,0,0-5.3,5.3,4.87,4.87,0,0,0,.1,1.2,14.86,14.86,0,0,1-11-5.6,10,10,0,0,0-.6,2.9,5,5,0,0,0,2.4,4.4,4.81,4.81,0,0,1-2.4-.7v.1a5.26,5.26,0,0,0,4.3,5.2,5.9,5.9,0,0,1-1.4.2,3.4,3.4,0,0,1-1-.1,5.28,5.28,0,0,0,5,3.7,10.78,10.78,0,0,1-6.6,2.3,5.7,5.7,0,0,1-1.3-.1,15.43,15.43,0,0,0,8.2,2.4A15.09,15.09,0,0,0,25.5,10.3V9.6A10.85,10.85,0,0,0,28,6.9Z" transform="translate(-2.1 -4.3)"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -379,8 +387,10 @@
   ></script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="app.js"></script>
+  <script src="index.js"></script>
   <script>
-    AOS.init();
+    AOS.init(
+      {disable: "mobile"}
+    );
   </script>
 </html>
